@@ -25,6 +25,9 @@ import { WeatherSearch } from './WeatherSearch';
 import { ReactRedux } from './ReactRedux';
 import { AdvancedReact } from './AdvancedReact';
 import { Recoil } from './Recoil';
+import { CodeSplit } from './CodeSplit';
+import { Calculator } from './Temperature';
+import { Game } from './Game';
 
 //import context in app
 import { UserProvider } from './context/UserContext'
@@ -81,6 +84,9 @@ function App() {
                                 <Route exact path="/reactredux" component={ReactRedux} />
                                 <Route exact path="/advancedreact" component={AdvancedReact} />
                                 <Route exact path="/recoillibrary" component={Recoil} />
+                                <Route exact path="/codespliting" component={CodeSplit} />
+                                <Route exact path="/tempconvert" component={Calculator} />
+                                <Route exact path="/tictacgame" component={Game} />
                                 
                                 {/* <Name.Provider value={nameObj}>
                                     <Address.Provider value={addressObj}>   
@@ -96,7 +102,7 @@ function App() {
                             </Switch>
                         </AddressProvider>
                     </NameProvider>  
-                </Wrapper>          
+                </Wrapper> 
             </Router>            
         </React.Fragment>
     );

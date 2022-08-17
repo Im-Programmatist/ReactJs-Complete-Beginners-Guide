@@ -113,6 +113,24 @@ class SideNav extends React.Component {
                     name: 'Recoil',
                     css: 'fa fa-arrow-up',
                     key: 15
+                },
+                {
+                    path: '/codespliting',
+                    name: 'CodeSplit',
+                    css: 'fa fa-arrow-up',
+                    key: 16
+                },
+                {
+                    path: '/tempconvert',
+                    name: 'TempCalculator',
+                    css: 'fa fa-arrow-up',
+                    key: 17
+                },
+                {
+                    path: '/tictacgame',
+                    name: 'Game-Tictactoe',
+                    css: 'fa fa-arrow-up',
+                    key: 18
                 }
             ]
         }
