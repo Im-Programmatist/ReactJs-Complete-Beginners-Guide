@@ -28,6 +28,8 @@ import { Recoil } from './Recoil';
 import { CodeSplit } from './CodeSplit';
 import { Calculator } from './Temperature';
 import { Game } from './Game';
+import { JSXComp } from './JSX';
+import { CreateRef } from './CreateRef';
 
 //import context in app
 import { UserProvider } from './context/UserContext'
@@ -68,7 +70,8 @@ function App() {
                                 <Route exact path="/" component={Home} /> 
                                 {/*Using default param and match in component*/}
                                 {/* <Route exact path="/:fname/:lname" component={Home} /> */}
-                                
+                                <Route exact path="/jsx" component={JSXComp} />
+
                                 <Route exact path="/route/:testHook?" component={ReactRoute} />                        
                                 <Route exact path="/forms" component={Forms} />
                                 <Route exact path="/spreadoperator" component={Spread} />
@@ -87,6 +90,7 @@ function App() {
                                 <Route exact path="/codespliting" component={CodeSplit} />
                                 <Route exact path="/tempconvert" component={Calculator} />
                                 <Route exact path="/tictacgame" component={Game} />
+                                <Route exact path="/createRef" component={CreateRef} />                                
                                 
                                 {/* <Name.Provider value={nameObj}>
                                     <Address.Provider value={addressObj}>   

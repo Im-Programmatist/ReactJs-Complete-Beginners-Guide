@@ -30,6 +30,7 @@ export default class NavItem extends React.Component{
     
     render(){
         const { active } = this.props;
+        console.log("Active class is - ",active);
         return (
             // <StyledNavItem active={active}>
             //     <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>

@@ -1,7 +1,7 @@
 import React from 'react';
 //import { slide as Menu } from 'react-burger-menu';
 //import { bubble as Menu } from 'react-burger-menu';
-import { elastic as Menu } from 'react-burger-menu';
+//import { elastic as Menu } from 'react-burger-menu';
 import styled from "styled-components";
 import NavItem from './NavItem';
 import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
@@ -131,6 +131,18 @@ class SideNav extends React.Component {
                     name: 'Game-Tictactoe',
                     css: 'fa fa-arrow-up',
                     key: 18
+                },
+                {
+                    path: '/jsx',
+                    name: 'JSX',
+                    css: 'fa fa-points',
+                    key: 19
+                },
+                {
+                    path: '/createRef',
+                    name: 'Create Reference',
+                    css: 'fa fa-points',
+                    key: 20
                 }
             ]
         }
@@ -149,7 +161,7 @@ class SideNav extends React.Component {
                     items.map((item) => {
                         /* Return however many NavItems in array to be rendered */
                         return (
-                            <NavItem key={item.key} path={item.path} name={item.name} css={item.css} onItemClick={this.onItemClick} /* Simply passed an entire function to onClick prop */ active={item.path === activePath} key={item.key} />
+                            <NavItem key={item.key} path={item.path} name={item.name} css={item.css} onItemClick={this.onItemClick} /* Simply passed an entire function to onClick prop */ active={item.path === activePath}/>
                         )
                     })
                 }

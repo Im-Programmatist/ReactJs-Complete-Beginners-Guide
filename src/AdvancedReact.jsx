@@ -834,7 +834,8 @@ const RefParent = () => {
     
     function updateInput() {
         inputRef.current.value = "1000";
-        inputRef.current.style.color = "Red";
+        inputRef.current.style.color = "Green";
+        inputRef.current.placeholder = "Refference Value";
     } 
 
     return(
@@ -847,9 +848,13 @@ const RefParent = () => {
 } 
 
 const RefChild =  React.forwardRef((props, ref) => {
+    console.log("ref",ref);
     return(
         <>
-            <input type="text" id="input1" ref={ref} />            
+        <div>
+            <input type="text" id="input1" ref={ref} /> 
+        </div>
+      
         </>
     )
 }); 

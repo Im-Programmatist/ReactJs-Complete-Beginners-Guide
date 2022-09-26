@@ -6,9 +6,13 @@ import {useSelector, useDispatch} from 'react-redux';
 import { inNumber, decNumber } from './actions/index';
 
 export const ReactRedux = () => {
+    //Two hooks that allow your React components to interact with the Redux store.
+    // useSelector reads a value from the store state and subscribes to updates, 
+    // while useDispatch returns the store's dispatch method to let you dispatch actions.
     const myState = useSelector((state) => state.changeNumber);
     const dispatch = useDispatch();
     console.log('myState',myState);
+    
     return (
         <>
             <ol>
@@ -43,7 +47,7 @@ export const ReactRedux = () => {
                 <li>Reducers are pure functions- these are depends on it's arguments and does not changes any of it's argument</li>
                 <li>DOES NOT DEPEND ON OTHER EXTERNAL PARAMETERS</li>
                 <li>Reducers are called automatically when action is dispatched. --- All reducers connected to the store & present in project get called for every action dispatched.</li>
-                <li>it is responsible for perticular stae in store & return the new forms of the state </li>
+                <li>it is responsible for perticular state in store & return the new forms of the state </li>
             </ol>
             <br/>
             <br/>
