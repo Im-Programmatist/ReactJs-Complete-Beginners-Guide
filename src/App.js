@@ -91,13 +91,11 @@ function App() {
                                 <Route exact path="/tempconvert" component={Calculator} />
                                 <Route exact path="/tictacgame" component={Game} />
                                 <Route exact path="/createRef" component={CreateRef} />                                
-                                
                                 {/* <Name.Provider value={nameObj}>
                                     <Address.Provider value={addressObj}>   
                                         <Route path="/hooks" component="Hooks" />
                                     </Address.Provider>
                                 </Name.Provider>  */}
-
                                 <Route>
                                     <UserProvider value={userContextData}>
                                         <InvalidComp/>
