@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import './Form.css';
 import styled from 'styled-components';
+import {useLocation} from 'react-router-dom';
 
 const Wrapper = styled.div`
     margin-top: 1em;
@@ -10,7 +11,8 @@ const Wrapper = styled.div`
 
 export const Forms = () => {
 
-    
+    const location = useLocation();
+    console.log("get data from navigation - ",location.state.name, location.state.id, location.state);
     const [name, setName] = useState("");
     const inputEvent = (event) => {
         console.log(event.target.value);

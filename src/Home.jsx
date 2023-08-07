@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, useHistory  } from 'react-router-dom';
 
 // const GridWrapper = styled.div`
 //     display: grid;
@@ -43,6 +43,15 @@ import { useParams } from 'react-router-dom';
     // }
 // }
 export const Home = () => {
+    const history = useHistory();
+    const toNavigateComponent = () => {
+        history.push("/forms", { name:'Mr Chetan Patil',id:23 });
+    }
+
+    // const navigate = useNavigate();
+    // const toNavigateComponent=()=>{
+    //     navigate('/forms',{state:{id:1,name:'Chetan Patil'}});
+    // }
 
     //using useParam Hooks
     const {fname, lname} = useParams(); //{fname, lname } variable name should be same as param name passed
@@ -73,6 +82,7 @@ export const Home = () => {
         return (
             <div>
                 <h3>Welcome</h3>
+                <a style={{color:"red"}} onClick={()=>{toNavigateComponent()}}>Component Form</a>
                 <ul>
                     <li> <i>https://reactjs.org/tutorial/tutorial.html -- Practical tutorial</i> </li>
                     <li> <i>https://reactjs.org/docs/hello-world.html -- step by step tutorial</i> </li>
